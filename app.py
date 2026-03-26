@@ -288,7 +288,7 @@ def render_start():
     st.divider()
 
     col1, col2, col3 = st.columns(3)
-    col1.metric("현재 승점", "37pt")
+    col1.metric("현재 승점", "30pt")
     col2.metric("잔여 경기", "7경기")
     col3.metric("현재 순위", "16위")
 
