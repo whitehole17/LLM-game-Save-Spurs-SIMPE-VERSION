@@ -132,11 +132,11 @@ HALFTIME_EFFECTS = {
     ("동기부여", "전술"):  (+0.08, +3),
     ("동기부여", "멘탈"):  (+0.35, +10),
     ("전술수정", "기세"):  (+0.08, +3),
-    ("전술수정", "전술"):  (+0.38, +12),
+    ("전술수정", "전술"):  (+0.28, +10),
     ("전술수정", "멘탈"):  (-0.10, -4),
     ("질책",    "기세"):  (+0.30, +8),
-    ("질책",    "전술"):  (-0.20, -8),
-    ("질책",    "멘탈"):  (-0.35, -12),
+    ("질책",    "전술"):  (-0.35, -14),
+    ("질책",    "멘탈"):  (-0.30, -12),
 }
 
 
@@ -524,7 +524,7 @@ def render_training():
 
     with col_a:
         if st.button("🏃 훈련 실행", disabled=(total != 100), use_container_width=True):
-            with st.spinner("훈련 평가 중..."):
+            with st.spinner(" 중..."):
                 train_result = evaluate_training_with_llm(gs, recovery, fitness, tactical)
             st.session_state.train_result = train_result
             st.rerun()
